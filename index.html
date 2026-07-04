@@ -1,0 +1,707 @@
+<!doctype html>
+<!--
+  ============================================================================
+  LabPRO Premium — Landing "O Marcador Vivo, dentro de um Dossiê" (hero-v5)
+  Vivere Fantinati Nutrição · variante PREMIUM/disruptiva (teste vs hero-v4)
+  ----------------------------------------------------------------------------
+  Conceito: editorial de luxo (restrição, serifa display, muito creme, latão)
+  com um DEMO INTERATIVO no coração — "O Marcador Vivo": o profissional move o
+  resultado e vê a LabPRO ler o exame ao vivo (dentro/fora da referência) +
+  o caminho de conduta de referência. Menos texto, mais gesto.
+
+  PUBLICAR (Pedro): página WordPress com template EM BRANCO/Canvas → colar tudo.
+  NÃO adicionar pixel/GTM — o GTM-524RHSNF site-wide injeta pixel+forwarding.
+  Botões = <a href> pro checkout Hotmart. NÃO apagar a v3/v4.
+
+  NOTAS:
+   - Nº de marcadores: 213 (confirmado na biblioteca markers_library). Alinhar
+     os anúncios para "213" também, para o número bater nos dois lugares.
+   - "Marcador Vivo" roda com 4 marcadores reais (B12, Vitamina D, Hematócrito,
+     Ácido Úrico) + toggle ♀/♂. Conduta EXIBIDA de forma resumida de propósito
+     (o banco tem dosagens específicas — não expor prescrição/protocolo público).
+   - Revisar as frases de estado do widget (compliance CFN/CDC: apoio, não veredito).
+  ============================================================================
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ================== TRACKING ==================
+  Google Tag Manager (container GTM-524RHSNF) — dispara o pixel 1247613592991250
+  + o script de forwarding (utm/sck/fbclid → links da Hotmart). Está incluído aqui
+  porque esta página vai num SUBDOMÍNIO próprio (ex: labpropremium.nutrirenatafantinati.com.br),
+  que NÃO herda o GTM site-wide do WordPress.
+  ⚠️ Se um dia publicar esta página DENTRO do WordPress (mesmo domínio, template em branco),
+     REMOVA este bloco + o <noscript> do body — senão o GTM dispara 2× (conversões duplicadas). -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-524RHSNF');</script>
+<!-- ================================================ -->
+<meta name="theme-color" content="#33502f">
+<title>LabPRO Premium · veja o exame ser lido. Por Renata Fantinati.</title>
+<meta name="description" content="A planilha profissional que compara cada marcador com o valor ideal funcional integrativo por gênero e organiza os caminhos de conduta e suplementação. Você decide. Para profissionais da saúde. 213 marcadores · 12× R$27,71 · 7 dias de garantia.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LabPRO Premium · veja o exame ser lido">
+<meta property="og:description" content="Mova o resultado e veja a LabPRO ler o exame ao vivo. 213 marcadores. Por Renata Fantinati.">
+<meta property="og:image" content="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.2.jpg">
+<link rel="icon" href="https://nutrirenatafantinati.com.br/wp-content/uploads/2025/06/cropped-Favicon-Renata-32x32.png" sizes="32x32">
+<link rel="preconnect" href="https://nutrirenatafantinati.com.br" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --cream:#f8f4ec; --cream-2:#f2ede6; --paper:#fbf9f3;
+    --green-d:#33502f; --green:#41633b; --green-2:#6da663;
+    --ink:#402c20; --ink-soft:#6b5644;
+    --terra:#a5533b;
+    --brass:#b8912f; --brass-line:rgba(184,145,47,.42); --hair:rgba(64,44,32,.12);
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --shadow:0 12px 40px rgba(64,44,32,.10);
+    --shadow-lg:0 24px 70px rgba(64,44,32,.16);
+    --maxw:1120px; --readw:680px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{margin:0; font-family:var(--sans); color:var(--ink); background:var(--cream);
+    line-height:1.65; font-size:18px; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    font-variant-numeric:tabular-nums;}
+  img{max-width:100%; height:auto; display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--serif); font-weight:500; color:var(--green-d); margin:0 0 .4em; letter-spacing:-.02em; line-height:1.06}
+  h1{font-size:clamp(2.55rem,7.6vw,4.6rem); line-height:1.02}
+  h2{font-size:clamp(1.95rem,4.6vw,3.1rem)}
+  h3{font-size:1.3rem; letter-spacing:-.01em}
+  p{margin:0 0 1em}
+  strong{font-weight:600; color:var(--ink)}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  .read{max-width:var(--readw); margin-inline:auto}
+  .center{text-align:center}
+  section{padding:clamp(64px,10vw,120px) 0; position:relative}
+  .overline{font-family:var(--sans); text-transform:uppercase; letter-spacing:.2em; font-size:.72rem; font-weight:700; color:var(--brass); display:inline-block}
+  .overline.rule::after{content:""; display:block; width:46px; height:1px; background:var(--brass-line); margin:12px auto 0}
+  .overline.rule.left::after{margin:12px 0 0}
+  .num{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--brass); font-size:1.4rem; letter-spacing:0}
+  .lead{font-size:1.16rem; color:var(--ink-soft)}
+  .vers{font-family:var(--sans); text-transform:uppercase; letter-spacing:.14em; font-size:.68rem; color:var(--ink-soft); font-weight:600}
+
+  /* ---- prancha (moldura editorial de asset) ---- */
+  .prancha{border-radius:14px; overflow:hidden; background:var(--paper); border:1px solid var(--brass-line); box-shadow:var(--shadow); }
+  .prancha img{width:100%; display:block}
+  figure{margin:0}
+  .cap{margin-top:12px; text-align:center}
+  .cap .vers{display:block}
+  .cap .illus{font-size:.72rem; color:var(--ink-soft); opacity:.8; font-style:italic}
+
+  /* ---- buttons ---- */
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:12px;
+    background:var(--green-d); color:var(--cream); font-family:var(--sans); font-weight:600;
+    font-size:1.02rem; letter-spacing:.01em; text-decoration:none; text-align:center;
+    padding:19px 40px; border:0; border-radius:8px; cursor:pointer; min-height:58px;
+    box-shadow:0 10px 30px rgba(51,80,47,.24); transition:transform .18s ease, box-shadow .18s ease, background .18s ease;}
+  .btn:hover{transform:translateY(-2px) scale(1.015); box-shadow:0 18px 40px rgba(51,80,47,.3); background:#2a4227}
+  .btn:focus-visible{outline:2px solid var(--brass); outline-offset:4px}
+  .btn .ar{font-size:1.05em}
+  .btn-cream{background:var(--cream); color:var(--green-d)}
+  .btn-cream:hover{background:#fff}
+  .btn-ghost{background:transparent; color:var(--green-d); border:1px solid var(--brass-line); box-shadow:none}
+  .btn-ghost:hover{background:rgba(184,145,47,.08); box-shadow:none}
+  .cta-note{font-family:var(--sans); font-size:.9rem; color:var(--ink-soft); margin:14px 0 0; letter-spacing:.01em}
+  .cta-wrap{display:flex; flex-direction:column; align-items:center}
+
+  /* ---- header ---- */
+  header.site{position:sticky; top:0; z-index:60; transition:background .3s ease, box-shadow .3s ease, border-color .3s}
+  header.site .bar{display:flex; align-items:center; justify-content:space-between; height:72px}
+  header.site.scrolled{background:rgba(248,244,236,.9); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--hair)}
+  .wm{display:inline-flex; align-items:baseline; gap:8px; text-decoration:none; line-height:1}
+  .wm-main{font-family:var(--serif); font-weight:600; font-size:1.42rem; letter-spacing:-.02em; color:var(--green-d)}
+  .wm-main i{font-style:italic; color:var(--brass)}
+  .wm-sub{font-family:var(--sans); text-transform:uppercase; letter-spacing:.22em; font-size:.56rem; font-weight:700; color:var(--ink-soft)}
+  header.site .btn{padding:12px 20px; min-height:0; font-size:.88rem; box-shadow:none; white-space:nowrap}
+  header.site .btn:hover{transform:none}
+
+  /* ---- reveal: scroll-driven (view timeline) c/ fallback que SEMPRE termina visível ---- */
+  @keyframes lp-rise{from{opacity:0; transform:translateY(24px)} to{opacity:1; transform:none}}
+  .js .reveal{animation:lp-rise .8s both cubic-bezier(.22,.61,.36,1)}
+  @supports (animation-timeline: view()){ .js .reveal{animation-timeline:view(); animation-range:entry 4% cover 24%} }
+
+  /* ---- 1 HERO ---- */
+  .hero{padding-top:clamp(40px,7vw,80px); padding-bottom:34px; background:
+     radial-gradient(1100px 520px at 50% -8%, rgba(184,145,47,.08), transparent 62%), var(--cream)}
+  .hero .read{text-align:center}
+  .hero .overline{margin-bottom:26px}
+  .hero h1{margin-bottom:.34em}
+  .hero .sub{font-size:1.2rem; color:var(--ink-soft); max-width:600px; margin:0 auto 20px}
+  .hero .disc{font-size:.86rem; color:var(--ink-soft); font-style:italic; margin:0 auto 34px; max-width:440px}
+  .hero .prov{margin-top:30px; font-family:var(--sans); font-size:.86rem; color:var(--ink-soft); letter-spacing:.02em; display:flex; gap:10px 22px; justify-content:center; flex-wrap:wrap}
+  .hero .prov b{color:var(--green-d); font-weight:700}
+  .scroll-cue{margin-top:30px; font-family:var(--sans); text-transform:uppercase; letter-spacing:.18em; font-size:.66rem; color:var(--brass); font-weight:700}
+  .scroll-cue::after{content:""; display:block; width:1px; height:24px; margin:12px auto 0; background:linear-gradient(var(--brass-line),transparent); }
+
+  /* ---- 2 MARCADOR VIVO ---- */
+  .mv-sec{padding-top:clamp(30px,4vw,48px); background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+  .mv-sec .head{text-align:center; max-width:640px; margin:0 auto clamp(28px,4vw,44px)}
+  .mv-card{max-width:760px; margin:0 auto; background:var(--paper); border:1px solid var(--brass-line);
+    border-radius:18px; box-shadow:var(--shadow-lg); overflow:hidden}
+  .mv-top{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 22px; border-bottom:1px solid var(--hair); background:rgba(184,145,47,.05)}
+  .mv-top .mv-brand{font-family:var(--serif); font-weight:600; color:var(--green-d); font-size:1.02rem; letter-spacing:-.01em}
+  .mv-top .mv-brand em{font-style:italic; color:var(--brass)}
+  .mv-top .mv-chiphint{font-family:var(--sans); font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em}
+  .mv-body{padding:clamp(22px,4vw,34px)}
+  .mv-steplabel{text-align:center; font-family:var(--sans); font-size:.82rem; font-weight:700; color:var(--ink-soft); letter-spacing:.01em; margin:0 0 10px}
+  .mv-steplabel b{color:var(--brass); font-family:var(--serif); font-style:italic; margin-right:3px; font-weight:500}
+  .mv-steptip{font-weight:400; opacity:.75}
+  .mv-gender{display:flex; width:-moz-fit-content; width:fit-content; margin:0 auto 24px; gap:4px; background:rgba(184,145,47,.1); border:1px solid var(--brass-line); border-radius:999px; padding:4px}
+  .mv-g{font-family:var(--sans); font-weight:700; font-size:.86rem; color:var(--ink-soft); background:transparent; border:0; border-radius:999px; padding:9px 20px; cursor:pointer; transition:.18s}
+  .mv-g[aria-pressed="true"]{background:var(--green-d); color:var(--cream)}
+  .mv-chips{display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:22px}
+  .mv-chip{font-family:var(--sans); font-size:.86rem; font-weight:600; color:var(--ink-soft); background:transparent;
+    border:1px solid var(--brass-line); border-radius:999px; padding:9px 16px; cursor:pointer; transition:.18s}
+  .mv-chip[aria-pressed="true"]{background:var(--green-d); color:var(--cream); border-color:var(--green-d)}
+  .mv-chip[disabled]{opacity:.5; cursor:not-allowed}
+  .mv-chip[disabled]::after{content:" · em breve"; font-weight:400; font-size:.78em; opacity:.8}
+  .mv-marker{font-family:var(--serif); font-size:1.1rem; color:var(--ink-soft); text-align:center; margin-bottom:4px}
+  .mv-marker b{color:var(--green-d); font-weight:600}
+  .mv-readout{text-align:center; margin:10px 0 6px}
+  .mv-value{font-family:var(--serif); font-weight:500; font-size:clamp(3.4rem,15vw,5.4rem); line-height:1; color:var(--ink); transition:color .45s ease; font-variant-numeric:tabular-nums}
+  .mv-unit{font-family:var(--sans); font-size:1rem; color:var(--ink-soft); letter-spacing:.04em; margin-left:6px; vertical-align:middle}
+  .mv-state{font-family:var(--sans); font-weight:700; letter-spacing:.02em; font-size:1.02rem; margin-top:6px; transition:color .45s ease; min-height:1.4em}
+  .is-inside .mv-value,.is-inside .mv-state{color:var(--green)}
+  .is-fora .mv-value,.is-fora .mv-state{color:var(--terra)}
+  /* ruler + slider */
+  .mv-slider{position:relative; height:64px; margin:14px 6px 2px}
+  .mv-track{position:absolute; left:0; right:0; top:34px; height:2px; background:var(--brass-line)}
+  .mv-band{position:absolute; top:29px; height:12px; border-radius:6px; background:rgba(109,166,99,.28); border:1px solid rgba(109,166,99,.5)}
+  .mv-ticks{position:absolute; left:0; right:0; top:44px; font-family:var(--sans); font-size:.66rem; color:var(--ink-soft)}
+  .mv-tick{position:absolute; transform:translateX(-50%); white-space:nowrap}
+  .mv-tick.edge{color:var(--green)}
+  .mv-tick::before{content:""; position:absolute; top:-12px; left:50%; width:1px; height:8px; background:var(--brass-line); transform:translateX(-50%)}
+  .mv-tick.edge::before{background:var(--green-2)}
+  input[type=range].mv-range{position:absolute; left:0; right:0; top:0; width:100%; height:64px; margin:0; background:transparent; -webkit-appearance:none; appearance:none; cursor:grab}
+  input[type=range].mv-range:active{cursor:grabbing}
+  .mv-range:focus-visible{outline:none}
+  .mv-range:focus-visible::-webkit-slider-thumb{outline:2px solid var(--brass); outline-offset:2px}
+  .mv-range::-webkit-slider-runnable-track{height:64px; background:transparent}
+  .mv-range::-webkit-slider-thumb{-webkit-appearance:none; width:36px; height:36px; margin-top:14px; border-radius:50%;
+    background:var(--green-d); border:3px solid var(--paper); box-shadow:0 0 0 0 rgba(51,80,47,.45), 0 3px 12px rgba(0,0,0,.28); transition:background .3s; animation:mv-pulse 1.9s ease-out infinite}
+  .mv-range::-moz-range-track{height:64px; background:transparent}
+  .mv-range::-moz-range-thumb{width:36px; height:36px; border-radius:50%; background:var(--green-d); border:3px solid var(--paper); box-shadow:0 3px 12px rgba(0,0,0,.28); animation:mv-pulse 1.9s ease-out infinite}
+  .is-fora .mv-range::-webkit-slider-thumb{background:var(--terra)}
+  .is-fora .mv-range::-moz-range-thumb{background:var(--terra)}
+  .mv-used .mv-range::-webkit-slider-thumb{animation:none}
+  .mv-used .mv-range::-moz-range-thumb{animation:none}
+  @keyframes mv-pulse{0%{box-shadow:0 0 0 0 rgba(51,80,47,.45),0 3px 12px rgba(0,0,0,.28)} 70%{box-shadow:0 0 0 15px rgba(51,80,47,0),0 3px 12px rgba(0,0,0,.28)} 100%{box-shadow:0 0 0 0 rgba(51,80,47,0),0 3px 12px rgba(0,0,0,.28)}}
+  .mv-cuewrap{text-align:center; margin:0 0 -4px}
+  .mv-cue{display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-weight:800; font-size:.9rem; color:var(--green-d); background:rgba(184,145,47,.14); border:1px solid var(--brass-line); padding:8px 16px; border-radius:999px; animation:mv-nudge 1.7s ease-in-out infinite}
+  .mv-cue .hand{font-size:1.15rem; display:inline-block; animation:mv-hand 1.7s ease-in-out infinite}
+  @keyframes mv-nudge{0%,100%{transform:translateX(-10px)} 50%{transform:translateX(10px)}}
+  @keyframes mv-hand{0%,100%{transform:rotate(-10deg)} 50%{transform:rotate(12deg)}}
+  .mv-used .mv-cue{opacity:0; transform:scale(.9); transition:opacity .4s ease, transform .4s ease; pointer-events:none}
+  .mv-hint{text-align:center; font-family:var(--sans); font-size:.8rem; color:var(--ink-soft); margin-top:8px}
+  /* panel significado */
+  .mv-panel{margin-top:24px; border-top:1px solid var(--hair); padding-top:22px}
+  .mv-panel .mv-plabel{font-family:var(--sans); text-transform:uppercase; letter-spacing:.14em; font-size:.68rem; font-weight:700; color:var(--brass); margin-bottom:8px}
+  .mv-conduta{font-family:var(--serif); font-size:1.12rem; color:var(--ink); line-height:1.5; margin:0; transition:opacity .35s ease}
+  .mv-decide{margin-top:14px; font-family:var(--sans); font-size:.82rem; color:var(--green-d); font-weight:600}
+  .mv-decide::before{content:"→ "; color:var(--brass)}
+  .mv-note{margin-top:10px; font-family:var(--sans); font-size:.78rem; color:var(--ink-soft); font-style:italic}
+  .mv-compliance{font-family:var(--sans); text-transform:uppercase; letter-spacing:.08em; font-size:.64rem; color:var(--ink-soft); opacity:.75; text-align:center; padding:14px 22px 20px; border-top:1px solid var(--hair); background:rgba(64,44,32,.02)}
+  .mv-lock{max-width:620px; margin:clamp(30px,5vw,44px) auto 0; text-align:center}
+  .mv-lock .lk{font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--green-d); margin-bottom:22px}
+  .mv-lock .lk b{font-style:normal; font-weight:600}
+
+  /* ---- 3 OFÍCIO ---- */
+  .ofi-grid{display:grid; gap:clamp(28px,4vw,44px); margin-top:clamp(34px,5vw,54px)}
+  .ofi{padding-top:22px; border-top:1px solid var(--brass-line)}
+  .ofi .num{display:block; margin-bottom:14px}
+  .ofi h3{font-size:1.5rem; color:var(--green-d); margin-bottom:.2em}
+  .ofi p{color:var(--ink-soft); font-size:1rem; font-family:var(--sans)}
+  .ofi-plate{margin-top:clamp(40px,5vw,60px)}
+
+  /* ---- 4 PDF ---- */
+  .pdf-sec{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+  .pdf-grid{display:grid; gap:clamp(30px,5vw,60px); align-items:center}
+  .pdf-txt .lead{margin-top:14px}
+
+  /* ---- 5 AUTORIDADE ---- */
+  .auth-grid{display:grid; gap:clamp(30px,5vw,56px); align-items:center}
+  .auth-photo{position:relative; max-width:400px; margin-inline:auto}
+  .auth-photo .prancha{border-radius:14px}
+  .auth-sign{font-family:var(--serif); font-style:italic; color:var(--brass); font-size:1.5rem; margin-top:16px}
+  .auth-txt .cred{margin:6px 0 18px}
+  .auth-txt .mission{font-family:var(--serif); font-size:1.4rem; color:var(--green-d); line-height:1.4; font-style:italic}
+  .auth-txt .bio{font-family:var(--sans); color:var(--ink-soft); font-size:1rem; margin-top:16px}
+
+  /* ---- 6 VOZES ---- */
+  .voz-sec{position:relative; overflow:hidden}
+  .voz-mark{position:absolute; top:-10px; left:2%; font-family:var(--serif); font-size:20rem; line-height:1; color:rgba(184,145,47,.1); pointer-events:none; z-index:0}
+  .voz-grid{position:relative; z-index:1; display:grid; gap:clamp(24px,3vw,40px); margin-top:clamp(34px,5vw,52px)}
+  .voz{padding-left:20px; border-left:1px solid var(--brass-line)}
+  .voz q{font-family:var(--serif); font-style:italic; font-size:1.22rem; color:var(--ink); line-height:1.45; quotes:none; display:block}
+  .voz q::before,.voz q::after{content:""}
+  .voz .who{margin-top:12px; font-family:var(--sans); font-weight:700; color:var(--green-d); font-size:.92rem}
+
+  /* ---- 7 OFERTA ---- */
+  .oferta{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+  .oferta .read{text-align:center}
+  .price-anchor{font-family:var(--sans); font-size:.98rem; color:var(--ink-soft); margin:8px 0 2px}
+  .price-anchor b{color:var(--green-d)}
+  .price{font-family:var(--serif); font-weight:500; color:var(--green-d); font-size:clamp(3rem,11vw,4.6rem); line-height:1; margin:8px 0 4px; font-variant-numeric:tabular-nums}
+  .price small{font-family:var(--sans); font-size:.28em; color:var(--ink-soft); vertical-align:.7em; font-weight:600; margin-right:.15em}
+  .price-full{font-family:var(--sans); color:var(--ink-soft); font-size:1rem; margin-bottom:26px}
+  .stats{display:flex; justify-content:center; gap:0; margin:0 auto 30px; max-width:520px; border-top:1px solid var(--hair); border-bottom:1px solid var(--hair)}
+  .stat{flex:1; padding:20px 8px; text-align:center}
+  .stat + .stat{border-left:1px solid var(--hair)}
+  .stat b{display:block; font-family:var(--serif); font-size:1.7rem; color:var(--green-d); line-height:1; font-variant-numeric:tabular-nums}
+  .stat span{font-family:var(--sans); text-transform:uppercase; letter-spacing:.1em; font-size:.64rem; color:var(--ink-soft); margin-top:8px; display:block}
+  .momentum{font-family:var(--serif); font-style:italic; font-size:1.16rem; color:var(--green-d); max-width:480px; margin:0 auto 30px}
+  .guar{display:flex; align-items:center; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:30px; font-family:var(--sans); font-size:.92rem; color:var(--ink-soft)}
+  .guar img{width:76px; height:76px}
+  .guar .gt{max-width:300px; text-align:left}
+  .pay{width:300px; max-width:100%; margin:22px auto 0; opacity:.85}
+  .secure{font-family:var(--sans); font-size:.82rem; color:var(--ink-soft); margin-top:8px}
+
+  /* ---- 8 FAQ ---- */
+  .faq{max-width:760px; margin:clamp(30px,4vw,48px) auto 0}
+  .faq details{border-top:1px solid var(--brass-line); padding:6px 0}
+  .faq details:last-child{border-bottom:1px solid var(--brass-line)}
+  .faq summary{list-style:none; cursor:pointer; padding:20px 40px 20px 0; position:relative;
+    font-family:var(--serif); font-size:1.24rem; color:var(--green-d); letter-spacing:-.01em}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+"; position:absolute; right:6px; top:18px; font-family:var(--sans); font-size:1.6rem; color:var(--brass); transition:transform .25s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .ans{padding:0 0 20px; color:var(--ink-soft); font-family:var(--sans); font-size:1.02rem; margin:0; max-width:660px}
+
+  /* ---- 9 FECHO ---- */
+  .fecho{background:var(--green-d); color:var(--cream); text-align:center}
+  .fecho h2{color:var(--cream); font-size:clamp(2.2rem,6vw,3.6rem); max-width:800px; margin-inline:auto}
+  .fecho .overline{color:var(--brass)}
+  .fecho .sub{color:rgba(248,244,236,.8); font-family:var(--sans); max-width:520px; margin:18px auto 32px}
+
+  /* ---- footer ---- */
+  footer.site{background:#2a4227; color:rgba(248,244,236,.72); padding:44px 0 36px; font-family:var(--sans); font-size:.88rem}
+  footer.site .wm{margin-bottom:18px}
+  footer.site .wm-main{color:var(--cream)}
+  footer.site .wm-main i{color:var(--brass)}
+  footer.site .wm-sub{color:rgba(248,244,236,.55)}
+  footer.site a{color:var(--brass); text-decoration:none; font-weight:600}
+  footer.site a:hover{text-decoration:underline}
+  footer.site .frow{display:flex; flex-wrap:wrap; gap:10px 24px; margin-bottom:16px}
+  footer.site .fine{opacity:.7; font-size:.8rem; line-height:1.7; max-width:720px}
+
+  /* ---- sticky mobile CTA ---- */
+  .stickybar{position:fixed; left:0; right:0; bottom:0; z-index:70; transform:translateY(120%); transition:transform .3s ease;
+    background:var(--green-d); box-shadow:0 -8px 30px rgba(0,0,0,.22); padding:11px 16px calc(11px + env(safe-area-inset-bottom))}
+  .stickybar.show{transform:translateY(0)}
+  .stickybar .in{display:flex; align-items:center; gap:14px; max-width:var(--maxw); margin:0 auto}
+  .stickybar .pr{color:var(--cream); line-height:1.15; font-family:var(--sans)}
+  .stickybar .pr b{display:block; font-size:1.02rem; font-weight:700}
+  .stickybar .pr span{font-size:.72rem; color:rgba(248,244,236,.7)}
+  .stickybar a.btn{flex:1; padding:14px 16px; min-height:50px; font-size:.98rem; background:var(--cream); color:var(--green-d); box-shadow:none}
+
+  /* ---- responsive ---- */
+  @media (min-width:860px){
+    .ofi-grid{grid-template-columns:repeat(3,1fr)}
+    .pdf-grid{grid-template-columns:1.05fr .95fr}
+    .auth-grid{grid-template-columns:.8fr 1.2fr}
+    .voz-grid{grid-template-columns:1fr 1fr}
+    .stickybar{display:none !important}
+  }
+  @media (max-width:859px){
+    header.site{position:static}
+    body{padding-bottom:78px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1 !important; transform:none !important; animation:none !important; transition:none}
+    .mv-cue, .mv-cue .hand, .mv-range::-webkit-slider-thumb, .mv-range::-moz-range-thumb{animation:none !important}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) — ver nota no <head> -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-524RHSNF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ============ HEADER ============ -->
+<header class="site" id="hdr">
+  <div class="wrap bar">
+    <a href="#topo" class="wm" aria-label="LabPRO Premium"><span class="wm-main">Lab<i>PRO</i></span><span class="wm-sub">Premium</span></a>
+    <a class="btn" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Garantir acesso</a>
+  </div>
+</header>
+
+<!-- ============ 1 · HERO ============ -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div class="read">
+      <span class="overline rule">LabPRO Premium · por Renata Fantinati</span>
+      <h1>Não vou te explicar.<br>Veja o exame ser lido.</h1>
+      <p class="sub">A planilha profissional que compara cada marcador com o <strong>valor ideal funcional integrativo por gênero</strong> e organiza os caminhos de <strong>conduta e suplementação</strong>. Você, profissional, decide.</p>
+      <p class="disc">Ferramenta de apoio à decisão. Não substitui a avaliação clínica individualizada.</p>
+      <div class="cta-wrap">
+        <a class="btn" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Conhecer a LabPRO Premium <span class="ar">→</span></a>
+        <p class="cta-note">12× R$27,71 · acesso imediato · 7 dias de garantia</p>
+      </div>
+      <div class="prov">
+        <span><b>213</b> marcadores clínicos</span>
+        <span><b>+4.000</b> profissionais da saúde mentorados</span>
+      </div>
+      <div class="scroll-cue">Experimente abaixo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · O MARCADOR VIVO ============ -->
+<section class="mv-sec" id="marcador-vivo">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="overline rule">O Marcador Vivo</span>
+      <h2>Não vou te contar. Veja.</h2>
+      <p class="lead">Selecione abaixo o marcador, o gênero e o resultado, e veja o resumo de como a LabPRO Premium interpretaria pra você.</p>
+    </div>
+
+    <div class="mv-card reveal" id="mv">
+      <div class="mv-top">
+        <span class="mv-brand">Lab<em>PRO</em> · leitura ao vivo</span>
+        <span class="mv-chiphint">exemplo ilustrativo</span>
+      </div>
+      <div class="mv-body">
+        <p class="mv-steplabel"><b>1.</b> Selecione o marcador</p>
+        <div class="mv-chips" role="group" aria-label="Escolha o marcador">
+          <button class="mv-chip" data-marker="b12" aria-pressed="true">Vitamina B12</button>
+          <button class="mv-chip" data-marker="vitd">Vitamina D</button>
+          <button class="mv-chip" data-marker="hemato">Hematócrito</button>
+          <button class="mv-chip" data-marker="urico">Ácido Úrico</button>
+        </div>
+
+        <p class="mv-steplabel"><b>2.</b> Escolha o gênero <span class="mv-steptip">(o valor ideal muda)</span></p>
+        <div class="mv-gender" role="group" aria-label="Gênero para o cálculo">
+          <button class="mv-g" data-g="f" aria-pressed="true">♀ Feminino</button>
+          <button class="mv-g" data-g="m" aria-pressed="false">♂ Masculino</button>
+        </div>
+
+        <p class="mv-steplabel"><b>3.</b> Informe o resultado</p>
+        <div class="mv-readout">
+          <span class="mv-value" id="mvValue">1.200</span><span class="mv-unit" id="mvUnit">ng/L</span>
+          <div class="mv-state" id="mvState">acima do valor ideal</div>
+        </div>
+
+        <div class="mv-cuewrap"><span class="mv-cue" id="mvCue"><span class="hand" aria-hidden="true">👇</span> arraste o resultado</span></div>
+        <div class="mv-slider">
+          <div class="mv-track"></div>
+          <div class="mv-band" id="mvBand"></div>
+          <div class="mv-ticks" id="mvTicks"></div>
+          <input type="range" class="mv-range" id="mvRange" min="300" max="1500" step="10" value="1200"
+                 aria-label="Resultado do marcador. Arraste para mais ou para menos." aria-describedby="mvState">
+        </div>
+        <p class="mv-hint" id="mvHint">deslize para mais ou para menos · faixa ideal ♀ 700 a 1.000 ng/L</p>
+
+        <div class="mv-panel">
+          <div class="mv-plabel">Significado e conduta</div>
+          <p class="mv-conduta" id="mvConduta">B12 alta no sangue pode mascarar uma deficiência funcional (bloqueio celular). A LabPRO sugere revisar a suplementação ativa e investigar (Holo-TC, MMA, homocisteína).</p>
+          <p class="mv-decide">A LabPRO organiza o caminho. Quem decide a conduta é você.</p>
+          <p class="mv-note">Este é um resumo. Na planilha, cada marcador vem com a conduta e a dosagem completas.</p>
+        </div>
+      </div>
+      <p class="mv-compliance">Exemplo ilustrativo · dados fictícios · não substitui avaliação clínica individualizada</p>
+      <noscript><figure class="prancha" style="margin:0;border:0"><img src="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP21-1024x322.jpg" width="1024" height="322" alt="Interface da LabPRO interpretando um marcador."></figure></noscript>
+    </div>
+
+    <div class="mv-lock reveal">
+      <p class="lk">Isso foi <b>1 de 213 marcadores</b>. Imagine o exame inteiro, lido assim.</p>
+      <div class="cta-wrap">
+        <a class="btn" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Quero ler qualquer exame assim <span class="ar">→</span></a>
+        <p class="cta-note">12× R$27,71 · acesso imediato</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · O OFÍCIO ============ -->
+<section id="oficio">
+  <div class="wrap">
+    <div class="read center reveal">
+      <span class="overline rule">O ofício</span>
+      <h2>Três gestos. Uma leitura clara.</h2>
+    </div>
+    <div class="ofi-grid">
+      <div class="ofi reveal"><span class="num">I</span><h3>Você digita o resultado.</h3><p>Só o valor do exame. Nada de decorar tabela de valores.</p></div>
+      <div class="ofi reveal"><span class="num">II</span><h3>Ela compara por gênero.</h3><p>Sinaliza o que está dentro ou fora do valor ideal e organiza a leitura.</p></div>
+      <div class="ofi reveal"><span class="num">III</span><h3>Você decide a conduta.</h3><p>Com o caminho de conduta e suplementação à mão. A decisão é sua.</p></div>
+    </div>
+    <figure class="prancha ofi-plate reveal">
+      <img src="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP2.2-1024x409.jpg"
+           srcset="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP2.2-768x307.jpg 768w, https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP2.2-1024x409.jpg 1024w"
+           sizes="(max-width:900px) 92vw, 1040px" width="1024" height="409" loading="lazy" decoding="async"
+           alt="Colunas de significado do resultado e caminhos de conduta e suplementação.">
+    </figure>
+    <p class="cap"><span class="vers">Prancha II · significado e conduta</span><span class="illus">exemplo ilustrativo · dados fictícios</span></p>
+  </div>
+</section>
+
+<!-- ============ 4 · A PRANCHA DO PACIENTE ============ -->
+<section class="pdf-sec" id="pdf">
+  <div class="wrap">
+    <div class="pdf-grid">
+      <div class="pdf-txt reveal">
+        <span class="overline rule left">O entregável</span>
+        <h2>E o paciente recebe uma peça à altura.</h2>
+        <p class="lead">Um clique e a LabPRO monta um PDF elegante, com Score, evolução e resumo, pronto pra enviar. Você fecha a consulta com autoridade.</p>
+      </div>
+      <figure class="pdf-fig reveal">
+        <div class="prancha">
+          <img src="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.2-1024x543.jpg"
+               srcset="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.2-768x407.jpg 768w, https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.2-1024x543.jpg 1024w"
+               sizes="(max-width:860px) 92vw, 520px" width="1024" height="543" loading="lazy" decoding="async"
+               alt="PDF do paciente: Score LabPro, evolução e resumo por categoria.">
+          <img src="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.3-1024x543.jpg"
+               srcset="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.3-768x407.jpg 768w, https://nutrirenatafantinati.com.br/wp-content/uploads/2026/02/IP4.3-1024x543.jpg 1024w"
+               sizes="(max-width:860px) 92vw, 520px" width="1024" height="543" loading="lazy" decoding="async"
+               alt="PDF do paciente: evolução do peso, IMC e o que melhorar agora.">
+        </div>
+        <p class="cap"><span class="vers">Prancha III · PDF do paciente (Diagnóstico e Evolução)</span><span class="illus">exemplo ilustrativo · dados fictícios</span></p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · AUTORIDADE ============ -->
+<section id="autoridade">
+  <div class="wrap">
+    <div class="auth-grid">
+      <div class="auth-photo reveal">
+        <figure class="prancha">
+          <img src="https://pmarafiotti.github.io/labpro-hero-v4-preview/renata-labproon.jpg"
+               sizes="(max-width:860px) 90vw, 400px" width="480" height="600" loading="lazy" decoding="async"
+               alt="Renata Fantinati, nutricionista funcional integrativa, criadora da LabPRO Premium.">
+        </figure>
+        <div class="auth-sign">Renata Fantinati</div>
+      </div>
+      <div class="auth-txt reveal">
+        <span class="overline rule left">Quem criou</span>
+        <h2>Criada por quem vive o consultório.</h2>
+        <p class="cred vers">Nutricionista Funcional Integrativa · +4.000 profissionais da saúde mentorados</p>
+        <p class="mission">“Criei a LabPRO pra ser o instrumento que eu queria ter tido no começo.”</p>
+        <p class="bio">Milhares de atendimentos por todo o Brasil e no exterior, com profissionais da saúde acompanhando de vários países. A LabPRO nasceu da prática real: do que funciona no consultório e na rotina de atendimento, não da teoria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · VOZES ============ -->
+<section class="voz-sec" id="vozes">
+  <div class="voz-mark" aria-hidden="true">“</div>
+  <div class="wrap">
+    <div class="read center reveal">
+      <span class="overline rule">Vozes de quem usa</span>
+      <h2>Referência reconhece referência.</h2>
+    </div>
+    <div class="voz-grid">
+      <div class="voz reveal"><q>Muito bem explicadinha… Uau! Arrasou nutri!</q><div class="who">Debora Furlaneto Rocha</div></div>
+      <div class="voz reveal"><q>Já era perfeita, agora está mais que perfeita. Parabéns pela elaboração e obrigada por tanto!!!</q><div class="who">Flávia da Conceição Bezerra</div></div>
+      <div class="voz reveal"><q>Maravilha! Ficou D+++… Parabéns!</q><div class="who">Ive Gonzalez Ribeiro</div></div>
+      <div class="voz reveal"><q>Uauuuu!!!! Essa planilha é fantástica!!!</q><div class="who">Kedma Campos</div></div>
+      <div class="voz reveal"><q>Simplesmente sensacional!!! Parabéns!</q><div class="who">Lena Dantas</div></div>
+      <div class="voz reveal"><q>Maravilhosa 👏👏👏</q><div class="who">Flávia Cristina da Conceição</div></div>
+    </div>
+    <p class="cap" style="margin-top:26px"><span class="illus">Depoimentos reais de profissionais da saúde.</span></p>
+  </div>
+</section>
+
+<!-- ============ 7 · A OFERTA ============ -->
+<section class="oferta" id="oferta">
+  <div class="wrap">
+    <div class="read reveal">
+      <span class="overline rule">A oferta</span>
+      <h2>Acesso completo à LabPRO Premium.</h2>
+      <p class="price-anchor">menos de <b>R$0,80 por dia</b> no primeiro ano</p>
+      <div class="price"><small>12×</small>R$27,71</div>
+      <p class="price-full">ou <strong>R$ 267,90</strong> à vista</p>
+      <div class="stats">
+        <div class="stat"><b>213</b><span>marcadores</span></div>
+        <div class="stat"><b>1 ano</b><span>de atualizações</span></div>
+        <div class="stat"><b>7 dias</b><span>de garantia</span></div>
+      </div>
+      <p class="momentum">Seu ano de atualizações começa hoje. Cada semana esperando é uma semana de marcadores novos que você não usa.</p>
+      <div class="cta-wrap">
+        <a class="btn" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Quero minha LabPRO Premium <span class="ar">→</span></a>
+        <p class="cta-note">acesso imediato · compra segura via Hotmart</p>
+      </div>
+      <div class="guar">
+        <img src="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/01/s15_img-300x300.png" width="76" height="76" loading="lazy" decoding="async" alt="Selo de 7 dias de garantia">
+        <div class="gt"><strong>A garantia é de 7 dias, o risco é nosso.</strong> Não fez sentido? Devolvemos 100%, sem perguntas.</div>
+      </div>
+      <img class="pay" src="https://nutrirenatafantinati.com.br/wp-content/uploads/2026/01/pagamentos-1.png" width="512" height="137" loading="lazy" decoding="async" alt="Formas de pagamento: Boleto, Visa, Mastercard, Amex, PayPal, Google Pay, Apple Pay, Pix e Hotmart.">
+      <p class="secure">🔒 Pagamento 100% seguro processado pela Hotmart</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 · FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="read center reveal">
+      <span class="overline rule">Perguntas essenciais</span>
+      <h2>O que costuma pesar antes de decidir.</h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Como consigo ver ela funcionando?</summary><p class="ans">A Nutri Renata gravou uma demonstração mostrando a LabPRO na prática, passo a passo. <a href="https://youtu.be/E3KCinHeWss" style="color:var(--green-d); font-weight:700; text-decoration:underline; text-decoration-color:var(--brass)">Assista à demonstração →</a></p></details>
+      <details><summary>Funciona no celular, tablet ou notebook?</summary><p class="ans">Para o uso completo (preencher os dados e rodar as automações), use um notebook ou computador (PC ou Apple), onde tudo funciona corretamente. No celular e no tablet dá para visualizar a planilha, mas o Google Sheets nesses aparelhos não executa as automações.</p></details>
+      <details><summary>Preciso saber mexer em planilha?</summary><p class="ans">Não. Ela roda no Google Sheets e, na prática, é só digitar o resultado do exame que a LabPRO faz a leitura pra você. E você recebe as aulas explicativas passo a passo.</p></details>
+      <details><summary>Serve pra minha área?</summary><p class="ans">Sim. É usada por nutricionistas, médicos, enfermeiros, ginecologistas, fisioterapeutas e profissionais da saúde que aprofundam o raciocínio clínico funcional integrativo.</p></details>
+      <details><summary>Quantos marcadores e relações tem?</summary><p class="ans">São 213 marcadores, praticamente todos com interpretação funcional completa (significado clínico e caminho de conduta e suplementação para abaixo, ideal e acima do valor ideal), além de 15 correlações automáticas entre exames, como TGO/TGP, Triglicérides/HDL e Neutrófilos/Linfócitos. Tudo como apoio: você revisa e valida cada análise.</p></details>
+      <details><summary>A planilha substitui a minha decisão clínica?</summary><p class="ans">Não. Ela organiza, apoia e agiliza o raciocínio; a validação final é sempre sua, considerando o histórico e o contexto de cada paciente. A LabPRO fortalece o seu olhar clínico, não substitui.</p></details>
+      <details><summary>Atende pediatria?</summary><p class="ans">No momento a LabPRO Premium conta com valores ideais para adultos, ainda não há campos específicos para pediatria. Os valores ideais pediátricos estão previstos para uma futura atualização da planilha, então fique de olho nas novidades.</p></details>
+      <details><summary>E gestantes?</summary><p class="ans">A planilha não possui um campo específico para gestantes, porém o raciocínio base de suplementação segue o mesmo padrão utilizado para mulheres adultas, sempre considerando a avaliação clínica e individual do profissional responsável pelo paciente.</p></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><p class="ans">A planilha, depois de copiada pro seu Google Drive, é sua e pode ser usada por quanto tempo quiser, com uso ilimitado: uma cópia por paciente, até 12 exames por arquivo. Você tem 1 ano de atualizações, aulas e suporte; na renovação, conta com o cupom de aluno.</p></details>
+      <details><summary>Posso testar antes? E a garantia?</summary><p class="ans">Sim. Você tem 7 dias de garantia incondicional para testar à vontade (recomendamos assistir às aulas para aproveitar todos os recursos). Se não atender às suas expectativas no prazo, devolvemos 100% do valor.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 · FECHO ============ -->
+<section class="fecho" id="fecho">
+  <div class="wrap reveal">
+    <span class="overline">Falta um gesto</span>
+    <h2>O exame já disse tudo. Falta você ler.</h2>
+    <p class="sub">213 marcadores lidos por gênero, o caminho de conduta e um PDF pro paciente. Por 12× R$27,71.</p>
+    <div class="cta-wrap">
+      <a class="btn btn-cream" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Começar agora <span class="ar">→</span></a>
+      <p class="cta-note" style="color:rgba(248,244,236,.75)">acesso imediato · 7 dias de garantia incondicional</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <span class="wm" aria-label="LabPRO Premium"><span class="wm-main">Lab<i>PRO</i></span><span class="wm-sub">Premium</span></span>
+    <div class="frow">
+      <a href="mailto:suporte@nutrirenatafantinati.com">suporte@nutrirenatafantinati.com</a>
+      <a href="https://wa.me/5511996435654?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LabPro%20Premium%21">Falar no WhatsApp</a>
+    </div>
+    <p class="fine">Vivere Fantinati Nutrição Ltda · Renata Fantinati, Nutricionista Funcional Integrativa.<br>
+    A LabPRO Premium é uma ferramenta de apoio ao raciocínio clínico. As sugestões de conduta e suplementação não substituem a avaliação individualizada do profissional habilitado.<br>
+    © 2026 Nutri Renata Fantinati. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="stickybar" id="stickybar" aria-hidden="true">
+  <div class="in">
+    <div class="pr"><b>12× R$27,71</b><span>ou R$267,90 à vista</span></div>
+    <a class="btn" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Garantir acesso →</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // (reveal é 100% CSS via animation-timeline com fallback — sem dependência de JS)
+
+  // ---- header scrolled state ----
+  var hdr = document.getElementById('hdr');
+  var onScroll = function(){ if(hdr) hdr.classList.toggle('scrolled', window.scrollY > 24); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // ---- O Marcador Vivo (dados reais da biblioteca LabPRO; conduta resumida) ----
+  var MARKERS = {
+    b12:   { name:'Vitamina B12', unit:'ng/L', min:300, max:1500, step:10, dec:0, def:1200,
+             ref:{ f:[700,1000], m:[700,1000] },
+             conduct:{ ideal:'Nível funcional adequado: boa metilação e disposição. A LabPRO traz a conduta de manutenção e a reavaliação.',
+                       above:'Acima de 1.000 com sinais de deficiência funcional pode indicar bloqueio celular da B12 (excesso de transcobalamina I). A LabPRO orienta interromper a suplementação ativa de B12, avaliar o Metilfolato (B9) e monitorar, solicitando Ácido Metilmalônico se persistir.',
+                       below:'Abaixo de 700 indica reposição em Metilcobalamina sublingual (forma ativa), pela manhã, com reavaliação laboratorial após o período.' } },
+    vitd:  { name:'Vitamina D (25-OH)', unit:'ng/mL', min:10, max:120, step:1, dec:0, def:70,
+             ref:{ f:[60,80], m:[60,80] },
+             conduct:{ ideal:'Nível de manutenção adequado. A LabPRO traz a conduta de manutenção (D3 com K2) e a reavaliação.',
+                       above:'Acima do alvo funcional: requer atenção na manutenção. A LabPRO orienta ajustar a suplementação (D3 com K2) e reavaliar após o período.',
+                       below:'Abaixo do ideal: requer reposição. A LabPRO calcula a dose de reposição de D3 (com K2) a partir do seu exame e orienta avaliar cofatores como o Magnésio para a conversão.' } },
+    hemato:{ name:'Hematócrito', unit:'%', min:25, max:60, step:1, dec:0, def:37,
+             ref:{ f:[39,47], m:[42,48] },
+             conduct:{ ideal:'Dentro dos valores ideais para o gênero.',
+                       above:'Pode indicar hemocromatose (acúmulo de ferro), hipóxia, excesso de ferro ou desidratação. Não há suplementação neste caso: a LabPRO orienta investigar as causas apontadas no significado.',
+                       below:'Possível anemia. A LabPRO orienta investigar a causa (deficiência de Ferro, B12 ou B9) e, se estiverem normais, checar os transportadores correspondentes.' } },
+    urico: { name:'Ácido Úrico', unit:'mg/dL', min:1, max:10, step:0.1, dec:1, def:6.2,
+             ref:{ f:[2.5,3.9], m:[3.5,4.9] },
+             conduct:{ ideal:'Boa saúde renal, baixa inflamação e insulina equilibrada. A LabPRO indica reavaliar em 6 meses.',
+                       above:'Ácido úrico alto se associa a inflamação, resistência à insulina e sobrecarga renal. A LabPRO aponta as causas (frutose, álcool, carne vermelha e vísceras, resistência à insulina, metais tóxicos, pouca água) e a conduta integrativa alimentar.',
+                       below:'Baixo pode indicar pouca proteína, hipotireoidismo, doença hepática ou déficit de B12, B6 ou Zinco. A LabPRO sugere ajustar proteínas, investigar a tireoide (TSH, T4, T3) e corrigir carências.' } }
+  };
+  var mv = document.getElementById('mv');
+  var range = document.getElementById('mvRange');
+  if (mv && range) {
+    var elVal = document.getElementById('mvValue'), elState = document.getElementById('mvState'),
+        elCond = document.getElementById('mvConduta'), elBand = document.getElementById('mvBand'),
+        elTicks = document.getElementById('mvTicks'), elUnit = document.getElementById('mvUnit'),
+        elHint = document.getElementById('mvHint');
+    var curKey = 'b12', gender = 'f';
+    var markUsed = function(){ /* a dica de arraste fica visível o tempo todo (pedido do cliente) */ };
+    var fmt = function(v, dec){ return Number(v).toLocaleString('pt-BR', {minimumFractionDigits:dec, maximumFractionDigits:dec}); };
+    var pct = function(M, v){ return ((v - M.min) / (M.max - M.min)) * 100; };
+    var refOf = function(M){ return M.ref[gender]; };
+    var drawBand = function(M){
+      var r = refOf(M);
+      elBand.style.left = pct(M, r[0]) + '%';
+      elBand.style.width = (pct(M, r[1]) - pct(M, r[0])) + '%';
+      elTicks.innerHTML = '';
+      [{v:M.min},{v:r[0],edge:1},{v:r[1],edge:1},{v:M.max}].forEach(function(t){
+        var s = document.createElement('span'); s.className = 'mv-tick' + (t.edge?' edge':'');
+        s.style.left = pct(M, t.v) + '%'; s.textContent = fmt(t.v, M.dec); elTicks.appendChild(s);
+      });
+    };
+    var update = function(){
+      var M = MARKERS[curKey], v = parseFloat(range.value), r = refOf(M);
+      elVal.textContent = fmt(v, M.dec);
+      var inside = v >= r[0] && v <= r[1];
+      var st = inside ? 'ideal' : (v > r[1] ? 'above' : 'below');
+      mv.classList.toggle('is-inside', inside);
+      mv.classList.toggle('is-fora', !inside);
+      elState.textContent = inside ? 'dentro do valor ideal'
+                          : (st === 'above' ? 'acima do valor ideal' : 'abaixo do valor ideal');
+      elHint.textContent = 'deslize para mais ou para menos · faixa ideal ' + (gender === 'f' ? '♀' : '♂') + ' ' + fmt(r[0], M.dec) + ' a ' + fmt(r[1], M.dec) + ' ' + M.unit;
+      elCond.style.opacity = '0';
+      window.setTimeout(function(){ elCond.textContent = M.conduct[st]; elCond.style.opacity = '1'; }, reduce ? 0 : 150);
+    };
+    var loadMarker = function(key){
+      curKey = key; var M = MARKERS[key];
+      elUnit.textContent = M.unit;
+      range.min = M.min; range.max = M.max; range.step = M.step; range.value = M.def;
+      range.setAttribute('aria-label', 'Resultado de ' + M.name + '. Arraste para mais ou para menos.');
+      drawBand(M); update();
+    };
+    [].forEach.call(document.querySelectorAll('.mv-chip'), function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.mv-chip').forEach(function(b){ b.setAttribute('aria-pressed', 'false'); });
+        btn.setAttribute('aria-pressed', 'true');
+        loadMarker(btn.getAttribute('data-marker')); markUsed();
+      });
+    });
+    [].forEach.call(document.querySelectorAll('.mv-g'), function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.mv-g').forEach(function(b){ b.setAttribute('aria-pressed', 'false'); });
+        btn.setAttribute('aria-pressed', 'true');
+        gender = btn.getAttribute('data-g'); drawBand(MARKERS[curKey]); update(); markUsed();
+      });
+    });
+    range.addEventListener('input', update);
+    ['pointerdown','input','keydown','touchstart'].forEach(function(ev){ range.addEventListener(ev, markUsed, {once:true, passive:true}); });
+    loadMarker('b12');
+  }
+
+  // ---- sticky mobile bar (após hero, some na oferta) ----
+  var bar = document.getElementById('stickybar');
+  var hero = document.getElementById('topo');
+  var oferta = document.getElementById('oferta');
+  if (bar && hero && 'IntersectionObserver' in window) {
+    var heroOut = false, offerIn = false;
+    var sync = function(){ var show = heroOut && !offerIn; bar.classList.toggle('show', show); bar.setAttribute('aria-hidden', show ? 'false' : 'true'); };
+    new IntersectionObserver(function(e){ heroOut = !e[0].isIntersecting; sync(); }, {rootMargin:'-55% 0px 0px 0px'}).observe(hero);
+    if (oferta) new IntersectionObserver(function(e){ offerIn = e[0].isIntersecting; sync(); }, {threshold:.1}).observe(oferta);
+  }
+})();
+</script>
+</body>
+</html>
