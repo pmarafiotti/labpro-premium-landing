@@ -202,7 +202,9 @@
   /* panel significado */
   .mv-panel{margin-top:24px; border-top:1px solid var(--hair); padding-top:22px}
   .mv-panel .mv-plabel{font-family:var(--sans); text-transform:uppercase; letter-spacing:.14em; font-size:.68rem; font-weight:700; color:var(--brass); margin-bottom:8px}
-  .mv-conduta{font-family:var(--serif); font-size:1.12rem; color:var(--ink); line-height:1.5; margin:0; transition:opacity .35s ease}
+  .mv-pblock{margin-bottom:16px}
+  .mv-sig{font-family:var(--sans); font-size:.95rem; color:var(--ink-soft); line-height:1.55; margin:0; white-space:pre-line; transition:opacity .3s ease}
+  .mv-conduta{font-family:var(--sans); font-size:.98rem; color:var(--ink); line-height:1.6; margin:0; white-space:pre-line; transition:opacity .3s ease}
   .mv-decide{margin-top:14px; font-family:var(--sans); font-size:.82rem; color:var(--green-d); font-weight:600}
   .mv-decide::before{content:"→ "; color:var(--brass)}
   .mv-note{margin-top:10px; font-family:var(--sans); font-size:.78rem; color:var(--ink-soft); font-style:italic}
@@ -371,9 +373,9 @@
         <p class="mv-steplabel"><b>1.</b> Selecione o marcador</p>
         <div class="mv-chips" role="group" aria-label="Escolha o marcador">
           <button class="mv-chip" data-marker="b12" aria-pressed="true">Vitamina B12</button>
-          <button class="mv-chip" data-marker="vitd">Vitamina D</button>
-          <button class="mv-chip" data-marker="hemato">Hematócrito</button>
-          <button class="mv-chip" data-marker="urico">Ácido Úrico</button>
+          <button class="mv-chip" data-marker="ferritina">Ferritina</button>
+          <button class="mv-chip" data-marker="hemoglobina">Hemoglobina</button>
+          <button class="mv-chip" data-marker="tsh">TSH</button>
         </div>
 
         <p class="mv-steplabel"><b>2.</b> Escolha o gênero <span class="mv-steptip">(o valor ideal muda)</span></p>
@@ -399,10 +401,16 @@
         <p class="mv-hint" id="mvHint">deslize para mais ou para menos · faixa ideal ♀ 700 a 1.000 ng/L</p>
 
         <div class="mv-panel">
-          <div class="mv-plabel">Significado e conduta</div>
-          <p class="mv-conduta" id="mvConduta">B12 alta no sangue pode mascarar uma deficiência funcional (bloqueio celular). A LabPRO sugere revisar a suplementação ativa e investigar (Holo-TC, MMA, homocisteína).</p>
+          <div class="mv-pblock">
+            <div class="mv-plabel">Significado</div>
+            <p class="mv-sig" id="mvSig">Acima de 1.000 pode indicar bloqueio celular da B12.</p>
+          </div>
+          <div class="mv-pblock">
+            <div class="mv-plabel">Conduta e suplementação</div>
+            <p class="mv-conduta" id="mvConduta">Se houver suplementação ativa de B12, interromper.</p>
+          </div>
           <p class="mv-decide">A LabPRO organiza o caminho. Quem decide a conduta é você.</p>
-          <p class="mv-note">Este é um resumo. Na planilha, cada marcador vem com a conduta e a dosagem completas.</p>
+          <p class="mv-note">Exemplo do que a planilha traz em cada marcador. É uma sugestão de direcionamento para apoiar você: você avalia, ajusta e valida para cada paciente.</p>
         </div>
       </div>
       <p class="mv-compliance">Exemplo ilustrativo · dados fictícios · não substitui avaliação clínica individualizada</p>
@@ -607,36 +615,52 @@
   var onScroll = function(){ if(hdr) hdr.classList.toggle('scrolled', window.scrollY > 24); };
   onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
 
-  // ---- O Marcador Vivo (dados reais da biblioteca LabPRO; conduta resumida) ----
+  // ---- O Marcador Vivo (conteúdo real da biblioteca LabPRO; trecho para exemplo) ----
   var MARKERS = {
-    b12:   { name:'Vitamina B12', unit:'ng/L', min:300, max:1500, step:10, dec:0, def:1200,
-             ref:{ f:[700,1000], m:[700,1000] },
-             conduct:{ ideal:'Nível funcional adequado: boa metilação e disposição. A LabPRO traz a conduta de manutenção e a reavaliação.',
-                       above:'Acima de 1.000 com sinais de deficiência funcional pode indicar bloqueio celular da B12 (excesso de transcobalamina I). A LabPRO orienta interromper a suplementação ativa de B12, avaliar o Metilfolato (B9) e monitorar, solicitando Ácido Metilmalônico se persistir.',
-                       below:'Abaixo de 700 indica reposição em Metilcobalamina sublingual (forma ativa), pela manhã, com reavaliação laboratorial após o período.' } },
-    vitd:  { name:'Vitamina D (25-OH)', unit:'ng/mL', min:10, max:120, step:1, dec:0, def:70,
-             ref:{ f:[60,80], m:[60,80] },
-             conduct:{ ideal:'Nível de manutenção adequado. A LabPRO traz a conduta de manutenção (D3 com K2) e a reavaliação.',
-                       above:'Acima do alvo funcional: requer atenção na manutenção. A LabPRO orienta ajustar a suplementação (D3 com K2) e reavaliar após o período.',
-                       below:'Abaixo do ideal: requer reposição. A LabPRO calcula a dose de reposição de D3 (com K2) a partir do seu exame e orienta avaliar cofatores como o Magnésio para a conversão.' } },
-    hemato:{ name:'Hematócrito', unit:'%', min:25, max:60, step:1, dec:0, def:37,
-             ref:{ f:[39,47], m:[42,48] },
-             conduct:{ ideal:'Dentro dos valores ideais para o gênero.',
-                       above:'Pode indicar hemocromatose (acúmulo de ferro), hipóxia, excesso de ferro ou desidratação. Não há suplementação neste caso: a LabPRO orienta investigar as causas apontadas no significado.',
-                       below:'Possível anemia. A LabPRO orienta investigar a causa (deficiência de Ferro, B12 ou B9) e, se estiverem normais, checar os transportadores correspondentes.' } },
-    urico: { name:'Ácido Úrico', unit:'mg/dL', min:1, max:10, step:0.1, dec:1, def:6.2,
-             ref:{ f:[2.5,3.9], m:[3.5,4.9] },
-             conduct:{ ideal:'Boa saúde renal, baixa inflamação e insulina equilibrada. A LabPRO indica reavaliar em 6 meses.',
-                       above:'Ácido úrico alto se associa a inflamação, resistência à insulina e sobrecarga renal. A LabPRO aponta as causas (frutose, álcool, carne vermelha e vísceras, resistência à insulina, metais tóxicos, pouca água) e a conduta integrativa alimentar.',
-                       below:'Baixo pode indicar pouca proteína, hipotireoidismo, doença hepática ou déficit de B12, B6 ou Zinco. A LabPRO sugere ajustar proteínas, investigar a tireoide (TSH, T4, T3) e corrigir carências.' } }
+    b12: { name:'Vitamina B12', unit:'ng/L', min:300, max:1500, step:10, dec:0, def:1200,
+      ref:{ f:[700,1000], m:[700,1000] },
+      sig:{ ideal:'Dentro do valor ideal: boa metilação, disposição e função neurológica.',
+            above:'Acima de 1.000 com sinais de deficiência funcional pode indicar bloqueio celular da B12 (excesso de transcobalamina I / abidcorrina): a B12 fica "presa" no sangue, sem entrar nas células.',
+            below:'Abaixo de 700: requer reposição.' },
+      conduta:{
+        ideal:'Manutenção:Metilcobalamina sublingual, 250 mcg/dia pela manhã, por 3 meses; reavaliar.\nOnívoros podem manter só com alimentação se a reavaliação confirmar estabilidade; vegetarianos e veganos mantêm a suplementação.',
+        above:'Se houver suplementação ativa de B12, interromper. Optar por complexo B sem B12.\nManter Metilfolato (B9) só com deficiência confirmada.\nRepetir a B12 em 3 meses; se persistir, solicitar Ácido Metilmalônico (ideal < 200 nmol/L).\nInvestigar causas: inflamação, disbiose, doença hepática ou renal.',
+        below:'Reposição:Metilcobalamina sublingual, 700 mcg/dia pela manhã, por 3 meses; repetir o exame após o período e ajustar a dose se necessário.' } },
+    ferritina: { name:'Ferritina', unit:'mcg/L', min:10, max:300, step:5, dec:0, def:45,
+      ref:{ f:[70,150], m:[70,150] },
+      sig:{ ideal:'Dentro do valor ideal.',
+            above:'Excesso de ferro ou inflamação. A ferritina é proteína de fase aguda: nem sempre reflete sobrecarga real de ferro.',
+            below:'Abaixo de 70: suplementar (ferro bisglicinato ou quelado).' },
+      conduta:{
+        ideal:'Manutenção:Ferro Bisglicinato (ou lipossomal) 20 mg/dia após o café ou almoço, por 3 meses; reavaliar.\nEvitar café, chá preto, leite e cálcio próximos à ingestão.',
+        above:'Avaliar Transferrina (200 a 400 mg/dL), Saturação de transferrina (25 a 40%) e Hemoglobina.\nTransferrina baixa pode indicar déficit de Vitamina A, C, B2, B9 ou B12.\nO ferro sérico isolado não é confiável (varia com a alimentação do dia anterior).',
+        below:'Reposição:Ferro Bisglicinato ou Quelado 40 mg/dia após o café, por 90 dias; reavaliar.\nFórmula sugerida (1 dose/dia após o café):\n• Ferro (Bisglicinato) 30 mg\n• Metilfolato (B9) 250 mcg\n• Vitamina A 5.000 UI\n• Riboflavina (B2) 25 mg\n• Vitamina C 150 mg\n• Zinco (Quelado) 15 mg\nEvitar café, leite e derivados próximos à ingestão.' } },
+    hemoglobina: { name:'Hemoglobina', unit:'g/dL', min:8, max:20, step:0.1, dec:1, def:13.8,
+      ref:{ f:[13.5,15], m:[14,16] },
+      sig:{ ideal:'Dentro dos valores ideais para o gênero.',
+            above:'Acima: possível hemocromatose, hipóxia, excesso de ferro ou desidratação.',
+            below:'Possível anemia.' },
+      conduta:{
+        ideal:'Manter e reavaliar.',
+        above:'Não há suplementação neste caso: investigar as causas apontadas no significado.',
+        below:'Identificar a deficiência (Ferro, Vitamina B12 ou B9) pelos marcadores específicos e seus transportadores, e suplementar conforme o nutriente identificado.\nSe esses estiverem dentro do ideal, checar também os transportadores correspondentes.' } },
+    tsh: { name:'TSH (Hormônio Tireoestimulante)', unit:'µUI/mL', min:0, max:8, step:0.1, dec:1, def:4,
+      ref:{ f:[1,2.5], m:[1,2.5] },
+      sig:{ ideal:'Dentro do valor ideal: função tireoidiana equilibrada.',
+            above:'Acima de 2,5: possível hipotireoidismo subclínico ou primário. A hipófise estimula a tireoide em excesso, mas ela responde de forma ineficiente. Pode ser o primeiro sinal de inflamação tireoidiana ou de deficiência nutricional.',
+            below:'Abaixo de 1,0: possível hipertireoidismo ou excesso de T3/T4, iodo, tirosina ou hormônio manipulado. Também pode ocorrer em estresse crônico ou uso de corticoides.' },
+      conduta:{
+        ideal:'Manter os hábitos e reavaliar periodicamente.',
+        above:'Investigar T3 Livre, T4 Livre, TPO e Tireoglobulina.\nCorrigir e suplementar as carências:\n• Iodo (iodeto de potássio)\n• Selênio (selenometionina)\n• Zinco (quelato)\n• Ferro (quelato)\n• Magnésio (glicinato ou treonato)\n• Tirosina (L-tirosina)\n• Vitamina A, Vitamina D3 (colecalciferol) e B12 (metilcobalamina)\nReduzir alimentos inflamatórios e avaliar autoimunidade (Hashimoto). Dosagens conforme avaliação individual; mínimo 3 meses, com reavaliação.',
+        below:'Avaliar T3 Livre, T4 Livre, TPO e Tireoglobulina.\nReduzir suplementos com iodo e tirosina (se em uso).\nAvaliar função adrenal e cortisol.\nAjustar a alimentação (evitar excesso de algas, sal iodado e cafeína) e checar deficiência de Vitamina A, D, Selênio, Zinco, Manganês, Magnésio, Ferritina e B12.' } }
   };
   var mv = document.getElementById('mv');
   var range = document.getElementById('mvRange');
   if (mv && range) {
     var elVal = document.getElementById('mvValue'), elState = document.getElementById('mvState'),
-        elCond = document.getElementById('mvConduta'), elBand = document.getElementById('mvBand'),
-        elTicks = document.getElementById('mvTicks'), elUnit = document.getElementById('mvUnit'),
-        elHint = document.getElementById('mvHint');
+        elSig = document.getElementById('mvSig'), elCond = document.getElementById('mvConduta'),
+        elBand = document.getElementById('mvBand'), elTicks = document.getElementById('mvTicks'),
+        elUnit = document.getElementById('mvUnit'), elHint = document.getElementById('mvHint');
     var curKey = 'b12', gender = 'f';
     var markUsed = function(){ /* a dica de arraste fica visível o tempo todo (pedido do cliente) */ };
     var fmt = function(v, dec){ return Number(v).toLocaleString('pt-BR', {minimumFractionDigits:dec, maximumFractionDigits:dec}); };
@@ -662,8 +686,8 @@
       elState.textContent = inside ? 'dentro do valor ideal'
                           : (st === 'above' ? 'acima do valor ideal' : 'abaixo do valor ideal');
       elHint.textContent = 'deslize para mais ou para menos · faixa ideal ' + (gender === 'f' ? '♀' : '♂') + ' ' + fmt(r[0], M.dec) + ' a ' + fmt(r[1], M.dec) + ' ' + M.unit;
-      elCond.style.opacity = '0';
-      window.setTimeout(function(){ elCond.textContent = M.conduct[st]; elCond.style.opacity = '1'; }, reduce ? 0 : 150);
+      elSig.style.opacity = '0'; elCond.style.opacity = '0';
+      window.setTimeout(function(){ elSig.textContent = M.sig[st]; elCond.textContent = M.conduta[st]; elSig.style.opacity = '1'; elCond.style.opacity = '1'; }, reduce ? 0 : 150);
     };
     var loadMarker = function(key){
       curKey = key; var M = MARKERS[key];
