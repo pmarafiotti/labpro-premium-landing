@@ -114,10 +114,8 @@
   header.site{position:sticky; top:0; z-index:60; transition:background .3s ease, box-shadow .3s ease, border-color .3s}
   header.site .bar{display:flex; align-items:center; justify-content:space-between; height:72px}
   header.site.scrolled{background:rgba(248,244,236,.9); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--hair)}
-  .wm{display:inline-flex; align-items:baseline; gap:8px; text-decoration:none; line-height:1}
-  .wm-main{font-family:var(--serif); font-weight:600; font-size:1.42rem; letter-spacing:-.02em; color:var(--green-d)}
-  .wm-main i{font-style:italic; color:var(--brass)}
-  .wm-sub{font-family:var(--sans); text-transform:uppercase; letter-spacing:.22em; font-size:.56rem; font-weight:700; color:var(--ink-soft)}
+  .wm{display:inline-block; line-height:0; text-decoration:none}
+  .wm-img{height:40px; width:auto; display:block}
   header.site .btn{padding:12px 20px; min-height:0; font-size:.88rem; box-shadow:none; white-space:nowrap}
   header.site .btn:hover{transform:none}
 
@@ -283,10 +281,7 @@
 
   /* ---- footer ---- */
   footer.site{background:#2a4227; color:rgba(248,244,236,.72); padding:44px 0 36px; font-family:var(--sans); font-size:.88rem}
-  footer.site .wm{margin-bottom:18px}
-  footer.site .wm-main{color:var(--cream)}
-  footer.site .wm-main i{color:var(--brass)}
-  footer.site .wm-sub{color:rgba(248,244,236,.55)}
+  footer.site .wm-img{height:36px; margin-bottom:18px}
   footer.site a{color:var(--brass); text-decoration:none; font-weight:600}
   footer.site a:hover{text-decoration:underline}
   footer.site .frow{display:flex; flex-wrap:wrap; gap:10px 24px; margin-bottom:16px}
@@ -329,7 +324,7 @@
 <!-- ============ HEADER ============ -->
 <header class="site" id="hdr">
   <div class="wrap bar">
-    <a href="#topo" class="wm" aria-label="LabPRO Premium"><span class="wm-main">Lab<i>PRO</i></span><span class="wm-sub">Premium</span></a>
+    <a href="#topo" class="wm" aria-label="LabPRO Premium"><img class="wm-img" src="logo_labpro_premium_amarelo.png" alt="LabPRO Premium" width="102" height="40" decoding="async"></a>
     <a class="btn" href="https://pay.hotmart.com/M97618726I?off=j4k3bie5&amp;checkoutMode=10">Garantir acesso</a>
   </div>
 </header>
@@ -585,7 +580,7 @@
 <!-- ============ FOOTER ============ -->
 <footer class="site">
   <div class="wrap">
-    <span class="wm" aria-label="LabPRO Premium"><span class="wm-main">Lab<i>PRO</i></span><span class="wm-sub">Premium</span></span>
+    <img class="wm-img" src="logo_labpro_premium_branco.png" alt="LabPRO Premium" width="92" height="36" loading="lazy" decoding="async">
     <div class="frow">
       <a href="mailto:suporte@nutrirenatafantinati.com">suporte@nutrirenatafantinati.com</a>
       <a href="https://wa.me/5511996435654?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LabPro%20Premium%21">Falar no WhatsApp</a>
